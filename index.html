@@ -45,6 +45,8 @@
 }
 </script>
 
+<link rel="alternate" hreflang="en" href="https://www.queenbeepaintingphoenix.com/index.html">
+<link rel="alternate" hreflang="es" href="https://www.queenbeepaintingphoenix.com/index.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 
@@ -826,6 +828,29 @@
     opacity: 1;
     transform: translateY(0);
   }
+
+  .lang-toggle {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(212,160,23,0.12);
+    border: 1px solid rgba(212,160,23,0.3);
+    color: var(--gold, #D4A017);
+    padding: 7px 16px;
+    border-radius: 100px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-family: 'DM Sans', sans-serif;
+    margin-left: 16px;
+  }
+  .lang-toggle:hover {
+    background: rgba(212,160,23,0.25);
+  }
+  .lang-toggle .flag { font-size: 16px; }
+
 </style>
 </head>
 <body>
@@ -849,6 +874,9 @@
     <li><a href="#process">Process</a></li>
     <li><a href="contact.html" class="nav-cta">Free Estimate</a></li>
   </ul>
+  <button class="lang-toggle" onclick="toggleLang()" id="langBtn">
+    <span class="flag">🇲🇽</span> ESPAÑOL
+  </button>
 </nav>
 
 <!-- HERO -->
@@ -1252,5 +1280,282 @@
     });
   });
 </script>
+
+<script>
+// ── TRANSLATION DATA ──────────────────────────────────────────
+const translations = {
+  en: {
+    // NAV
+    'nav-services': 'Services',
+    'nav-areas': 'Service Areas',
+    'nav-why': 'Why Us',
+    'nav-process': 'Process',
+    'nav-cta': 'Free Estimate',
+    // HERO
+    'hero-badge': '🐝 Phoenix\'s Premier Painting & Remodeling',
+    'hero-h1': 'Transform Your<br><em>Space.</em><br>Crown Your Home.',
+    'hero-desc': "Queen Bee\'s Painting & Remodeling LLC delivers flawless results for residential and commercial properties across greater Phoenix. Licensed, insured, and built on a reputation of trust.",
+    'hero-btn1': 'Get Free Estimate',
+    'hero-btn2': '📞 (602) 475-2017',
+    // STATS
+    'stat1-num': '12+',
+    'stat1-label': 'Years Serving<br>Phoenix',
+    'stat2-num': '500+',
+    'stat2-label': 'Projects<br>Completed',
+    'stat3-num': '5★',
+    'stat3-label': 'Average<br>Rating',
+    // TRUST BAR
+    'trust1': '✅ Licensed & Insured in Arizona',
+    'trust2': '🏆 500+ Projects Completed',
+    'trust3': '⭐ 5-Star Rated on Google',
+    'trust4': '📍 Locally Owned & Operated',
+    'trust5': '💬 Free Estimates Always',
+    // SERVICES
+    'services-label': 'What We Do',
+    'services-h2': 'Residential & Commercial<br>Services in Phoenix',
+    'services-desc': 'From a single room repaint to a full commercial remodel — Queen Bee\'s delivers exceptional quality every time.',
+    's1-h': 'Residential Painting Phoenix',
+    's1-p': 'Interior and exterior painting for homes across Phoenix, Scottsdale, Mesa, and surrounding areas. Flawless finishes. Zero mess. On time.',
+    's2-h': 'Commercial Painting Phoenix',
+    's2-p': 'Office buildings, retail spaces, warehouses, and HOA properties. We minimize downtime and maximize curb appeal for your business.',
+    's3-h': 'Bathroom Remodeling Phoenix',
+    's3-p': 'Complete bathroom renovations from tile to fixtures. We handle everything so you don\'t have to coordinate multiple contractors.',
+    's4-h': 'Kitchen Remodeling Phoenix',
+    's4-p': 'Cabinet refinishing, countertop updates, full kitchen gut renovations. Transform the heart of your home with precision craftsmanship.',
+    's5-h': 'Interior Remodeling Phoenix',
+    's5-p': 'Drywall, texture matching, trim work, accent walls, and full room renovations. Every detail handled with care and expertise.',
+    's6-h': 'Exterior Remodeling Phoenix',
+    's6-p': 'Stucco repair, exterior coatings, fencing, and curb appeal upgrades built to withstand the Arizona heat and desert conditions.',
+    // WHY
+    'why-label': 'Why Queen Bee\'s',
+    'why-h2': 'Phoenix Trusts Us<br>to Get It Right.',
+    'why-desc': 'Word of mouth built this business. Our reputation is everything — and we protect it on every single job.',
+    'f1-h': 'Licensed & Insured in Arizona',
+    'f1-p': 'Full liability coverage and Arizona ROC licensing. You\'re always protected on every project we touch.',
+    'f2-h': 'Locally Owned & Operated',
+    'f2-p': 'We live and work in Phoenix. We know the neighborhoods, the climate, and the materials that last in Arizona conditions.',
+    'f3-h': 'No Subcontractors',
+    'f3-p': 'Our own crew handles every job. Consistent quality, consistent accountability — every time.',
+    'f4-h': 'Free Detailed Estimates',
+    'f4-p': 'Transparent pricing. No surprises. You know exactly what you\'re getting before we ever pick up a brush.',
+    // AREAS
+    'areas-label': 'Where We Work',
+    'areas-h2': 'Serving All of Greater Phoenix',
+    'areas-desc': 'Painting and remodeling services across the entire Phoenix metro area. Local expertise in every neighborhood.',
+    // PROCESS
+    'process-label': 'How It Works',
+    'process-h2': 'Simple. Transparent. Done Right.',
+    'process-desc': 'We make the process as smooth as the finish we leave behind.',
+    'step1-h': 'Free Estimate',
+    'step1-p': 'We visit your property, assess the scope, and provide a detailed written estimate — no obligation, no pressure.',
+    'step2-h': 'Custom Plan',
+    'step2-p': 'We build a project plan tailored to your timeline, budget, and vision. Every detail confirmed before work begins.',
+    'step3-h': 'Expert Execution',
+    'step3-p': 'Our crew gets to work with premium materials, clean workmanship, and daily communication throughout the project.',
+    'step4-h': 'Final Walkthrough',
+    'step4-p': "We don\'t leave until you\'re 100% satisfied. Every job is inspected and signed off together before we close out.",
+    // CTA
+    'cta-label': 'Get Started',
+    'cta-h2': 'Request Your<br>Free Estimate Today',
+    'cta-desc': 'Serving Phoenix, Scottsdale, Mesa, Tempe, Glendale, Chandler, Gilbert & Peoria. We respond within 1 business hour.',
+    'form-fn': 'First Name', 'form-ln': 'Last Name', 'form-phone': 'Phone Number',
+    'form-email': 'Email Address', 'form-service': 'Service Needed', 'form-city': 'Your City in Phoenix Area',
+    'form-msg': 'Tell Us About Your Project',
+    'form-msg-ph': 'Describe your project, timeline, or any specific needs...',
+    'form-submit': '👑 Request Free Estimate →',
+    'form-urgency': '⚡ We typically respond within <strong>1 hour</strong> during business hours.',
+    'phone-label': 'Prefer to call? We answer 7 days a week.',
+    // FOOTER
+    'footer-desc': "Phoenix\'s trusted painting and remodeling contractor. Residential & commercial services across the greater Phoenix metro area. Licensed, insured, and built on referrals.",
+    'footer-copy': '© 2025 Queen Bee\'s Painting & Remodeling LLC · Phoenix, AZ · All Rights Reserved',
+    'sticky-call': '📞 Call Now — Free Estimate',
+    'lang-btn': '🇲🇽 ESPAÑOL',
+  },
+  es: {
+    'nav-services': 'Servicios',
+    'nav-areas': 'Áreas de Servicio',
+    'nav-why': 'Por Qué Nosotros',
+    'nav-process': 'Proceso',
+    'nav-cta': 'Estimado Gratis',
+    'hero-badge': '🐝 La Mejor Empresa de Pintura en Phoenix',
+    'hero-h1': 'Transforma Tu<br><em>Espacio.</em><br>Corona Tu Hogar.',
+    'hero-desc': 'Queen Bee\'s Painting & Remodeling LLC ofrece resultados impecables para propiedades residenciales y comerciales en toda el área de Phoenix. Licenciados, asegurados y con reputación de confianza.',
+    'hero-btn1': 'Estimado Gratis',
+    'hero-btn2': '📞 (602) 475-2017',
+    'stat1-num': '12+',
+    'stat1-label': 'Años Sirviendo<br>Phoenix',
+    'stat2-num': '500+',
+    'stat2-label': 'Proyectos<br>Completados',
+    'stat3-num': '5★',
+    'stat3-label': 'Calificación<br>Promedio',
+    'trust1': '✅ Licenciados y Asegurados en Arizona',
+    'trust2': '🏆 Más de 500 Proyectos Completados',
+    'trust3': '⭐ Calificación de 5 Estrellas en Google',
+    'trust4': '📍 Empresa Local de Phoenix',
+    'trust5': '💬 Estimados Gratis Siempre',
+    'services-label': 'Lo Que Hacemos',
+    'services-h2': 'Servicios Residenciales y<br>Comerciales en Phoenix',
+    'services-desc': 'Desde pintar un cuarto hasta una remodelación comercial completa — Queen Bee\'s entrega calidad excepcional en cada trabajo.',
+    's1-h': 'Pintura Residencial Phoenix',
+    's1-p': 'Pintura interior y exterior para hogares en Phoenix, Scottsdale, Mesa y áreas cercanas. Acabados perfectos. Sin desorden. A tiempo.',
+    's2-h': 'Pintura Comercial Phoenix',
+    's2-p': 'Edificios de oficinas, locales comerciales, bodegas y propiedades HOA. Minimizamos el tiempo de inactividad y maximizamos el atractivo de su negocio.',
+    's3-h': 'Remodelación de Baños Phoenix',
+    's3-p': 'Renovaciones completas de baños desde azulejos hasta accesorios. Nos encargamos de todo para que usted no tenga que coordinar múltiples contratistas.',
+    's4-h': 'Remodelación de Cocinas Phoenix',
+    's4-p': 'Restauración de gabinetes, actualización de encimeras, renovaciones completas de cocina. Transforme el corazón de su hogar con artesanía de precisión.',
+    's5-h': 'Remodelación Interior Phoenix',
+    's5-p': 'Tablaroca, igualación de texturas, molduras, paredes de acento y renovaciones completas de habitaciones. Cada detalle con cuidado y experiencia.',
+    's6-h': 'Remodelación Exterior Phoenix',
+    's6-p': 'Reparación de estuco, recubrimientos exteriores, cercas y mejoras de fachada diseñadas para resistir el calor y las condiciones del desierto de Arizona.',
+    'why-label': 'Por Qué Queen Bee\'s',
+    'why-h2': 'Phoenix Confía en Nosotros<br>para Hacerlo Bien.',
+    'why-desc': 'El boca a boca construyó este negocio. Nuestra reputación lo es todo — y la protegemos en cada trabajo.',
+    'f1-h': 'Licenciados y Asegurados en Arizona',
+    'f1-p': 'Cobertura de responsabilidad completa y licencia ROC de Arizona. Siempre está protegido en cada proyecto que realizamos.',
+    'f2-h': 'Empresa Local de Phoenix',
+    'f2-p': 'Vivimos y trabajamos en Phoenix. Conocemos los vecindarios, el clima y los materiales que duran en las condiciones de Arizona.',
+    'f3-h': 'Sin Subcontratistas',
+    'f3-p': 'Nuestro propio equipo realiza cada trabajo. Calidad consistente, responsabilidad consistente — siempre.',
+    'f4-h': 'Estimados Detallados Gratis',
+    'f4-p': 'Precios transparentes. Sin sorpresas. Usted sabe exactamente lo que obtiene antes de que tomemos un pincel.',
+    'areas-label': 'Dónde Trabajamos',
+    'areas-h2': 'Sirviendo Todo el Gran Phoenix',
+    'areas-desc': 'Servicios de pintura y remodelación en toda el área metropolitana de Phoenix. Experiencia local en cada vecindario.',
+    'process-label': 'Cómo Funciona',
+    'process-h2': 'Simple. Transparente. Bien Hecho.',
+    'process-desc': 'Hacemos el proceso tan suave como el acabado que dejamos.',
+    'step1-h': 'Estimado Gratis',
+    'step1-p': 'Visitamos su propiedad, evaluamos el alcance y proporcionamos un estimado detallado por escrito — sin obligación, sin presión.',
+    'step2-h': 'Plan Personalizado',
+    'step2-p': 'Creamos un plan de proyecto adaptado a su cronograma, presupuesto y visión. Cada detalle confirmado antes de comenzar.',
+    'step3-h': 'Ejecución Experta',
+    'step3-p': 'Nuestro equipo trabaja con materiales premium, mano de obra limpia y comunicación diaria durante todo el proyecto.',
+    'step4-h': 'Inspección Final',
+    'step4-p': 'No nos vamos hasta que usted esté 100% satisfecho. Cada trabajo es inspeccionado y aprobado juntos antes de cerrar.',
+    'cta-label': 'Comenzar',
+    'cta-h2': 'Solicite Su<br>Estimado Gratis Hoy',
+    'cta-desc': 'Sirviendo Phoenix, Scottsdale, Mesa, Tempe, Glendale, Chandler, Gilbert y Peoria. Respondemos en 1 hora hábil.',
+    'form-fn': 'Nombre', 'form-ln': 'Apellido', 'form-phone': 'Número de Teléfono',
+    'form-email': 'Correo Electrónico', 'form-service': 'Servicio Necesario', 'form-city': 'Su Ciudad en Phoenix',
+    'form-msg': 'Cuéntenos Sobre Su Proyecto',
+    'form-msg-ph': 'Describa su proyecto, cronograma o cualquier necesidad específica...',
+    'form-submit': '👑 Solicitar Estimado Gratis →',
+    'form-urgency': '⚡ Típicamente respondemos en <strong>1 hora</strong> durante horas hábiles.',
+    'phone-label': '¿Prefiere llamar? Respondemos 7 días a la semana.',
+    'footer-desc': 'El contratista de confianza de pintura y remodelación de Phoenix. Servicios residenciales y comerciales en toda el área metropolitana. Licenciado, asegurado y construido sobre referencias.',
+    'footer-copy': '© 2025 Queen Bee\'s Painting & Remodeling LLC · Phoenix, AZ · Todos los Derechos Reservados',
+    'sticky-call': '📞 Llame Ahora — Estimado Gratis',
+    'lang-btn': '🇺🇸 ENGLISH',
+  }
+};
+
+let currentLang = 'en';
+
+// Map data-i18n keys to DOM elements
+const keyMap = {
+  'nav-services':   () => document.querySelectorAll('.nav-links a')[0],
+  'nav-areas':      () => document.querySelectorAll('.nav-links a')[1],
+  'nav-why':        () => document.querySelectorAll('.nav-links a')[2],
+  'nav-process':    () => document.querySelectorAll('.nav-links a')[3],
+  'nav-cta':        () => document.querySelector('.nav-links .nav-cta'),
+  'hero-badge':     () => document.querySelector('.hero-badge'),
+  'hero-h1':        () => document.querySelector('.hero h1'),
+  'hero-desc':      () => document.querySelector('.hero-desc'),
+  'hero-btn1':      () => document.querySelectorAll('.hero-actions a')[0],
+  'hero-btn2':      () => document.querySelectorAll('.hero-actions a')[1],
+  'stat1-label':    () => document.querySelectorAll('.stat-label')[0],
+  'stat2-label':    () => document.querySelectorAll('.stat-label')[1],
+  'stat3-label':    () => document.querySelectorAll('.stat-label')[2],
+  'trust1':         () => document.querySelectorAll('.trust-item')[0],
+  'trust2':         () => document.querySelectorAll('.trust-item')[1],
+  'trust3':         () => document.querySelectorAll('.trust-item')[2],
+  'trust4':         () => document.querySelectorAll('.trust-item')[3],
+  'trust5':         () => document.querySelectorAll('.trust-item')[4],
+  'services-label': () => document.querySelectorAll('.section-label')[0],
+  'services-h2':    () => document.querySelectorAll('#services .section-title')[0],
+  'services-desc':  () => document.querySelector('#services .section-desc'),
+  's1-h':           () => document.querySelectorAll('.service-card h3')[0],
+  's1-p':           () => document.querySelectorAll('.service-card p')[0],
+  's2-h':           () => document.querySelectorAll('.service-card h3')[1],
+  's2-p':           () => document.querySelectorAll('.service-card p')[1],
+  's3-h':           () => document.querySelectorAll('.service-card h3')[2],
+  's3-p':           () => document.querySelectorAll('.service-card p')[2],
+  's4-h':           () => document.querySelectorAll('.service-card h3')[3],
+  's4-p':           () => document.querySelectorAll('.service-card p')[3],
+  's5-h':           () => document.querySelectorAll('.service-card h3')[4],
+  's5-p':           () => document.querySelectorAll('.service-card p')[4],
+  's6-h':           () => document.querySelectorAll('.service-card h3')[5],
+  's6-p':           () => document.querySelectorAll('.service-card p')[5],
+  'why-label':      () => document.querySelectorAll('.section-label')[1],
+  'why-h2':         () => document.querySelectorAll('.why-grid .section-title')[0],
+  'why-desc':       () => document.querySelector('.why-grid .section-desc'),
+  'f1-h':           () => document.querySelectorAll('.feature h4')[0],
+  'f1-p':           () => document.querySelectorAll('.feature p')[0],
+  'f2-h':           () => document.querySelectorAll('.feature h4')[1],
+  'f2-p':           () => document.querySelectorAll('.feature p')[1],
+  'f3-h':           () => document.querySelectorAll('.feature h4')[2],
+  'f3-p':           () => document.querySelectorAll('.feature p')[2],
+  'f4-h':           () => document.querySelectorAll('.feature h4')[3],
+  'f4-p':           () => document.querySelectorAll('.feature p')[3],
+  'areas-label':    () => document.querySelectorAll('.section-label')[2],
+  'areas-h2':       () => document.querySelector('.areas-header .section-title'),
+  'areas-desc':     () => document.querySelector('.areas-header .section-desc'),
+  'process-label':  () => document.querySelectorAll('.section-label')[3],
+  'process-h2':     () => document.querySelector('.process-header .section-title'),
+  'process-desc':   () => document.querySelector('.process-header .section-desc'),
+  'step1-h':        () => document.querySelectorAll('.step h4')[0],
+  'step1-p':        () => document.querySelectorAll('.step p')[0],
+  'step2-h':        () => document.querySelectorAll('.step h4')[1],
+  'step2-p':        () => document.querySelectorAll('.step p')[1],
+  'step3-h':        () => document.querySelectorAll('.step h4')[2],
+  'step3-p':        () => document.querySelectorAll('.step p')[2],
+  'step4-h':        () => document.querySelectorAll('.step h4')[3],
+  'step4-p':        () => document.querySelectorAll('.step p')[3],
+  'cta-label':      () => document.querySelectorAll('.section-label')[4],
+  'cta-h2':         () => document.querySelector('.cta-box .section-title'),
+  'cta-desc':       () => document.querySelector('.cta-box .section-desc'),
+  'form-submit':    () => document.querySelector('.contact-form button'),
+  'phone-label':    () => document.querySelector('.phone-cta p'),
+  'footer-desc':    () => document.querySelector('.footer-desc'),
+  'footer-copy':    () => document.querySelector('.footer-bottom p'),
+  'sticky-call':    () => document.querySelector('.sticky-call'),
+  'lang-btn':       () => document.getElementById('langBtn'),
+};
+
+function applyTranslations(lang) {
+  const t = translations[lang];
+  for (const [key, getEl] of Object.entries(keyMap)) {
+    try {
+      const el = getEl();
+      if (el && t[key] !== undefined) {
+        el.innerHTML = t[key];
+      }
+    } catch(e) {}
+  }
+  // Update html lang attribute
+  document.documentElement.lang = lang;
+  // Update page title
+  document.title = lang === 'es'
+    ? "Queen Bee's Pintura y Remodelación Phoenix AZ | Contratista #1 Residencial y Comercial"
+    : "Queen Bee's Painting & Remodeling Phoenix AZ | #1 Residential & Commercial Contractor";
+  // Update meta description
+  const metaDesc = document.querySelector('meta[name="description"]');
+  if (metaDesc) {
+    metaDesc.content = lang === 'es'
+      ? 'La mejor empresa de pintura y remodelación en Phoenix. Queen Bee\' Painting & Remodeling LLC. Proyectos residenciales y comerciales. Estimados gratis. ¡Llame ahora!'
+      : "Phoenix's top-rated painting and remodeling company. Queen Bee's Painting & Remodeling LLC. Residential & commercial. Free estimates. Call now!";
+  }
+}
+
+function toggleLang() {
+  currentLang = currentLang === 'en' ? 'es' : 'en';
+  applyTranslations(currentLang);
+  // Smooth flash effect
+  document.body.style.opacity = '0.8';
+  setTimeout(() => document.body.style.opacity = '1', 200);
+}
+</script>
+
 </body>
 </html>
