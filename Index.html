@@ -1,0 +1,1256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ✅ SEO META TAGS -->
+<title>Queen Bee's Painting & Remodeling Phoenix AZ | #1 Residential & Commercial Contractor</title>
+<meta name="description" content="Phoenix's top-rated painting and remodeling company. Queen Bee's Painting & Remodeling LLC handles residential & commercial projects across Phoenix, Scottsdale, Tempe, Mesa & Glendale. Free estimates. Call now!">
+<meta name="keywords" content="painting contractor Phoenix AZ, remodeling Phoenix AZ, commercial painting Phoenix, residential remodeling Phoenix, interior painting Phoenix, exterior painting Phoenix, home remodeling Phoenix, bathroom remodel Phoenix, kitchen remodel Phoenix, Queen Bee Painting Phoenix">
+<meta name="robots" content="index, follow">
+<meta name="geo.region" content="US-AZ">
+<meta name="geo.placename" content="Phoenix, Arizona">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Queen Bee's Painting & Remodeling | Phoenix AZ">
+<meta property="og:description" content="Top-rated painting & remodeling in Phoenix. Residential & commercial. Free estimates. Licensed & insured.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.queenbeepaintingphoenix.com">
+
+<!-- Schema Markup for Local Business -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Queen Bee's Painting & Remodeling LLC",
+  "description": "Phoenix's premier painting and remodeling contractor serving residential and commercial clients across the greater Phoenix area.",
+  "url": "https://www.queenbeepaintingphoenix.com",
+  "telephone": "(602) 475-2017",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Phoenix",
+    "addressRegion": "AZ",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 33.4484,
+    "longitude": -112.0740
+  },
+  "areaServed": ["Phoenix", "Scottsdale", "Tempe", "Mesa", "Glendale", "Chandler", "Gilbert", "Peoria"],
+  "serviceType": ["Residential Painting", "Commercial Painting", "Interior Painting", "Exterior Painting", "Home Remodeling", "Kitchen Remodeling", "Bathroom Remodeling", "Commercial Remodeling"],
+  "openingHours": "Mo-Sa 07:00-18:00",
+  "priceRange": "$$"
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --gold: #C8006A;
+    --gold-light: #FF4DA6;
+    --black: #0D0D0D;
+    --charcoal: #1A1A1A;
+    --dark: #111111;
+    --cream: #FBF6EE;
+    --white: #FFFFFF;
+    --gray: #888;
+    --accent: #9A0050;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--black);
+    color: var(--white);
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 48px;
+    background: rgba(10,10,10,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(200,0,106,0.2);
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+  }
+
+  .logo-bee {
+    font-size: 28px;
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+  }
+
+  .logo-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--gold);
+    line-height: 1.2;
+  }
+
+  .logo-sub {
+    font-size: 10px;
+    color: var(--gray);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    color: rgba(255,255,255,0.75);
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+
+  .nav-links a:hover { color: var(--gold); }
+
+  .nav-cta {
+    background: var(--gold);
+    color: var(--black) !important;
+    padding: 10px 22px;
+    border-radius: 2px;
+    font-weight: 600 !important;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background: var(--black);
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 60% 60% at 70% 50%, rgba(200,0,106,0.12) 0%, transparent 70%),
+      radial-gradient(ellipse 40% 40% at 20% 80%, rgba(200,0,106,0.06) 0%, transparent 60%);
+  }
+
+  .hero-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(200,0,106,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(200,0,106,0.04) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 0 48px;
+    max-width: 760px;
+    padding-top: 100px;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(200,0,106,0.12);
+    border: 1px solid rgba(200,0,106,0.3);
+    color: var(--gold);
+    padding: 6px 16px;
+    border-radius: 100px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 28px;
+    animation: fadeUp 0.8s ease forwards;
+    opacity: 0;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(48px, 7vw, 88px);
+    font-weight: 900;
+    line-height: 1.0;
+    margin-bottom: 24px;
+    animation: fadeUp 0.8s 0.2s ease forwards;
+    opacity: 0;
+  }
+
+  .hero h1 em {
+    font-style: normal;
+    color: var(--gold);
+    position: relative;
+  }
+
+  .hero-desc {
+    font-size: 18px;
+    color: rgba(255,255,255,0.65);
+    line-height: 1.7;
+    margin-bottom: 40px;
+    max-width: 560px;
+    font-weight: 300;
+    animation: fadeUp 0.8s 0.4s ease forwards;
+    opacity: 0;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    animation: fadeUp 0.8s 0.6s ease forwards;
+    opacity: 0;
+  }
+
+  .btn-primary {
+    background: var(--gold);
+    color: var(--black);
+    padding: 16px 36px;
+    font-size: 15px;
+    font-weight: 700;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    letter-spacing: 0.5px;
+    transition: all 0.3s;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  .btn-primary:hover {
+    background: var(--gold-light);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(200,0,106,0.35);
+  }
+
+  .btn-secondary {
+    background: transparent;
+    color: var(--white);
+    padding: 16px 36px;
+    font-size: 15px;
+    font-weight: 500;
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 2px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  .btn-secondary:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+  }
+
+  .hero-stats {
+    position: absolute;
+    right: 80px;
+    bottom: 80px;
+    display: flex;
+    gap: 48px;
+    animation: fadeUp 0.8s 0.8s ease forwards;
+    opacity: 0;
+  }
+
+  .stat {
+    text-align: center;
+  }
+
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    font-weight: 900;
+    color: var(--gold);
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-size: 11px;
+    color: var(--gray);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-top: 6px;
+  }
+
+  /* ── TRUST BAR ── */
+  .trust-bar {
+    background: var(--charcoal);
+    border-top: 1px solid rgba(200,0,106,0.15);
+    border-bottom: 1px solid rgba(200,0,106,0.15);
+    padding: 20px 48px;
+    display: flex;
+    justify-content: center;
+    gap: 64px;
+    flex-wrap: wrap;
+  }
+
+  .trust-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: rgba(255,255,255,0.6);
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+  }
+
+  .trust-icon { color: var(--gold); font-size: 16px; }
+
+  /* ── SECTIONS ── */
+  section { padding: 100px 48px; }
+
+  .section-label {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(32px, 4vw, 52px);
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 20px;
+  }
+
+  .section-desc {
+    color: rgba(255,255,255,0.6);
+    font-size: 17px;
+    line-height: 1.7;
+    max-width: 600px;
+    font-weight: 300;
+  }
+
+  /* ── SERVICES ── */
+  #services { background: var(--dark); }
+
+  .services-header {
+    text-align: center;
+    margin-bottom: 64px;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .service-card {
+    background: var(--charcoal);
+    padding: 48px 40px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s;
+    border: 1px solid rgba(200,0,106,0.08);
+  }
+
+  .service-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 3px;
+    height: 0;
+    background: var(--gold);
+    transition: height 0.4s;
+  }
+
+  .service-card:hover::before { height: 100%; }
+  .service-card:hover { background: #1E1E1E; transform: translateY(-4px); }
+
+  .service-icon {
+    font-size: 36px;
+    margin-bottom: 20px;
+    display: block;
+  }
+
+  .service-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: var(--white);
+  }
+
+  .service-card p {
+    color: rgba(255,255,255,0.55);
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+  }
+
+  .service-keywords {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .kw-tag {
+    background: rgba(200,0,106,0.1);
+    border: 1px solid rgba(200,0,106,0.2);
+    color: var(--gold);
+    font-size: 10px;
+    padding: 3px 10px;
+    border-radius: 100px;
+    letter-spacing: 0.5px;
+  }
+
+  /* ── WHY US ── */
+  #why { background: var(--black); }
+
+  .why-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .why-features {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin-top: 40px;
+  }
+
+  .feature {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .feature-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 900;
+    color: rgba(200,0,106,0.2);
+    line-height: 1;
+    min-width: 48px;
+  }
+
+  .feature h4 {
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+
+  .feature p {
+    color: rgba(255,255,255,0.5);
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .why-visual {
+    position: relative;
+  }
+
+  .why-box {
+    background: var(--charcoal);
+    border: 1px solid rgba(200,0,106,0.15);
+    padding: 48px;
+    position: relative;
+  }
+
+  .why-box::after {
+    content: '👑';
+    position: absolute;
+    top: -20px;
+    right: 32px;
+    font-size: 40px;
+  }
+
+  .review-card {
+    background: rgba(200,0,106,0.06);
+    border: 1px solid rgba(200,0,106,0.15);
+    border-radius: 4px;
+    padding: 24px;
+    margin-bottom: 16px;
+  }
+
+  .stars { color: var(--gold); font-size: 14px; margin-bottom: 10px; }
+
+  .review-text {
+    font-size: 14px;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.6;
+    font-style: italic;
+    margin-bottom: 12px;
+  }
+
+  .reviewer {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--gold);
+  }
+
+  /* ── SERVICE AREAS ── */
+  #areas { background: var(--charcoal); }
+
+  .areas-header { text-align: center; margin-bottom: 60px; }
+
+  .areas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    max-width: 1000px;
+    margin: 0 auto 48px;
+  }
+
+  .area-card {
+    background: var(--dark);
+    border: 1px solid rgba(200,0,106,0.1);
+    padding: 28px 24px;
+    text-align: center;
+    transition: all 0.3s;
+    cursor: pointer;
+  }
+
+  .area-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-3px);
+  }
+
+  .area-icon { font-size: 24px; margin-bottom: 10px; }
+
+  .area-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+
+  .area-services {
+    font-size: 11px;
+    color: var(--gray);
+    letter-spacing: 0.5px;
+  }
+
+  /* ── PROCESS ── */
+  #process { background: var(--black); }
+
+  .process-header { text-align: center; margin-bottom: 64px; }
+
+  .process-steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .process-steps::before {
+    content: '';
+    position: absolute;
+    top: 32px;
+    left: 15%;
+    right: 15%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  }
+
+  .step {
+    text-align: center;
+    padding: 0 20px;
+    position: relative;
+  }
+
+  .step-num {
+    width: 64px;
+    height: 64px;
+    background: var(--gold);
+    color: var(--black);
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 900;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 24px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .step h4 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .step p {
+    font-size: 13px;
+    color: rgba(255,255,255,0.5);
+    line-height: 1.6;
+  }
+
+  /* ── CTA ── */
+  #contact {
+    background: var(--charcoal);
+    border-top: 1px solid rgba(200,0,106,0.2);
+    text-align: center;
+  }
+
+  .cta-box {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .cta-box .section-title { margin-bottom: 16px; }
+  .cta-box .section-desc { margin: 0 auto 40px; }
+
+  .contact-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .form-group.full { grid-column: 1 / -1; }
+
+  .form-group label {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 600;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: var(--white);
+    padding: 14px 16px;
+    font-size: 14px;
+    font-family: 'DM Sans', sans-serif;
+    border-radius: 2px;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    border-color: var(--gold);
+  }
+
+  .form-group select option { background: var(--charcoal); }
+
+  .form-group textarea { resize: vertical; min-height: 100px; }
+
+  .phone-cta {
+    margin-top: 32px;
+    padding-top: 32px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .phone-cta p { color: var(--gray); font-size: 13px; margin-bottom: 8px; }
+
+  .phone-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--gold);
+    text-decoration: none;
+    display: block;
+    transition: color 0.3s;
+  }
+
+  .phone-num:hover { color: var(--gold-light); }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #080808;
+    padding: 48px;
+    border-top: 1px solid rgba(200,0,106,0.1);
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 48px;
+    max-width: 1200px;
+    margin: 0 auto 40px;
+  }
+
+  .footer-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--gold);
+    margin-bottom: 14px;
+  }
+
+  .footer-desc {
+    font-size: 13px;
+    color: rgba(255,255,255,0.4);
+    line-height: 1.7;
+    margin-bottom: 20px;
+  }
+
+  .footer-col h5 {
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+
+  .footer-col ul { list-style: none; }
+
+  .footer-col ul li {
+    margin-bottom: 10px;
+  }
+
+  .footer-col ul li a {
+    color: rgba(255,255,255,0.45);
+    text-decoration: none;
+    font-size: 13px;
+    transition: color 0.3s;
+  }
+
+  .footer-col ul li a:hover { color: var(--gold); }
+
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.06);
+    padding-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .footer-bottom p { font-size: 12px; color: rgba(255,255,255,0.25); }
+
+  .license-badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    color: rgba(255,255,255,0.35);
+  }
+
+  /* ── STICKY CALL BAR (mobile) ── */
+  .sticky-call {
+    display: none;
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    z-index: 200;
+    background: var(--gold);
+    color: var(--black);
+    padding: 16px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 16px;
+    text-decoration: none;
+  }
+
+  @media (max-width: 768px) {
+    nav { padding: 16px 20px; }
+    .nav-links { display: none; }
+    .hero-content { padding: 0 20px; padding-top: 100px; }
+    .hero-stats { display: none; }
+    section { padding: 60px 20px; }
+    .why-grid { grid-template-columns: 1fr; gap: 40px; }
+    .process-steps { grid-template-columns: 1fr 1fr; gap: 40px; }
+    .process-steps::before { display: none; }
+    .contact-form { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+    .trust-bar { gap: 24px; padding: 16px 20px; }
+    .sticky-call { display: block; }
+    body { padding-bottom: 60px; }
+  }
+
+  /* Scroll reveal */
+  .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.7s ease;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+</head>
+<body>
+
+<!-- STICKY MOBILE CALL -->
+<a href="tel:6024752017" class="sticky-call">📞 Call Now — Free Estimate</a>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="logo">
+    <img src="data:image/jpeg;base64,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" alt="Queen Bee Painting Remodeling Phoenix Logo" style="height:56px;width:56px;object-fit:cover;border-radius:50%;border:2px solid rgba(200,0,106,0.4);">
+    <div>
+      <div class="logo-text">Queen Bee's</div>
+      <div class="logo-sub">Painting & Remodeling LLC</div>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#areas">Service Areas</a></li>
+    <li><a href="#why">Why Us</a></li>
+    <li><a href="#process">Process</a></li>
+    <li><a href="contact.html" class="nav-cta">Free Estimate</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-badge">🐝 Phoenix's Premier Painting & Remodeling</div>
+    <h1>Transform Your<br><em>Space.</em><br>Crown Your Home.</h1>
+    <p class="hero-desc">Queen Bee's Painting & Remodeling LLC delivers flawless results for residential and commercial properties across greater Phoenix. Licensed, insured, and built on a reputation of trust.</p>
+    <div class="hero-actions">
+      <a href="contact.html" class="btn-primary">Get Free Estimate</a>
+      <a href="tel:6024752017" class="btn-secondary">📞 (602) 475-2017</a>
+    </div>
+  </div>
+  <div class="hero-stats">
+    <div class="stat">
+      <div class="stat-num">12+</div>
+      <div class="stat-label">Years Serving<br>Phoenix</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">500+</div>
+      <div class="stat-label">Projects<br>Completed</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">5★</div>
+      <div class="stat-label">Average<br>Rating</div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-item"><span class="trust-icon">✅</span> Licensed & Insured in Arizona</div>
+  <div class="trust-item"><span class="trust-icon">🏆</span> 500+ Projects Completed</div>
+  <div class="trust-item"><span class="trust-icon">⭐</span> 5-Star Rated on Google</div>
+  <div class="trust-item"><span class="trust-icon">📍</span> Locally Owned & Operated</div>
+  <div class="trust-item"><span class="trust-icon">💬</span> Free Estimates Always</div>
+</div>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="services-header reveal">
+    <div class="section-label">What We Do</div>
+    <h2 class="section-title">Residential & Commercial<br>Services in Phoenix</h2>
+    <p class="section-desc">From a single room repaint to a full commercial remodel — Queen Bee's delivers exceptional quality every time.</p>
+  </div>
+  <div class="services-grid">
+    <div class="service-card reveal">
+      <span class="service-icon">🏠</span>
+      <h3>Residential Painting Phoenix</h3>
+      <p>Interior and exterior painting for homes across Phoenix, Scottsdale, Mesa, and surrounding areas. Flawless finishes. Zero mess. On time.</p>
+      <div class="service-keywords">
+        <span class="kw-tag">Interior Painting</span>
+        <span class="kw-tag">Exterior Painting</span>
+        <span class="kw-tag">House Painting Phoenix</span>
+      </div>
+    </div>
+    <div class="service-card reveal">
+      <span class="service-icon">🏢</span>
+      <h3>Commercial Painting Phoenix</h3>
+      <p>Office buildings, retail spaces, warehouses, and HOA properties. We minimize downtime and maximize curb appeal for your business.</p>
+      <div class="service-keywords">
+        <span class="kw-tag">Office Painting</span>
+        <span class="kw-tag">Commercial Contractor</span>
+        <span class="kw-tag">HOA Painting</span>
+      </div>
+    </div>
+    <div class="service-card reveal">
+      <span class="service-icon">🛁</span>
+      <h3>Bathroom Remodeling Phoenix</h3>
+      <p>Complete bathroom renovations from tile to fixtures. We handle everything so you don't have to coordinate multiple contractors.</p>
+      <div class="service-keywords">
+        <span class="kw-tag">Bathroom Remodel</span>
+        <span class="kw-tag">Tile Work</span>
+        <span class="kw-tag">Renovation Phoenix</span>
+      </div>
+    </div>
+    <div class="service-card reveal">
+      <span class="service-icon">🍳</span>
+      <h3>Kitchen Remodeling Phoenix</h3>
+      <p>Cabinet refinishing, countertop updates, full kitchen gut renovations. Transform the heart of your home with precision craftsmanship.</p>
+      <div class="service-keywords">
+        <span class="kw-tag">Kitchen Remodel</span>
+        <span class="kw-tag">Cabinet Painting</span>
+        <span class="kw-tag">Kitchen Renovation</span>
+      </div>
+    </div>
+    <div class="service-card reveal">
+      <span class="service-icon">🪟</span>
+      <h3>Interior Remodeling Phoenix</h3>
+      <p>Drywall, texture matching, trim work, accent walls, and full room renovations. Every detail handled with care and expertise.</p>
+      <div class="service-keywords">
+        <span class="kw-tag">Drywall Repair</span>
+        <span class="kw-tag">Texture Matching</span>
+        <span class="kw-tag">Interior Remodel</span>
+      </div>
+    </div>
+    <div class="service-card reveal">
+      <span class="service-icon">🌵</span>
+      <h3>Exterior Remodeling Phoenix</h3>
+      <p>Stucco repair, exterior coatings, fencing, and curb appeal upgrades built to withstand the Arizona heat and desert conditions.</p>
+      <div class="service-keywords">
+        <span class="kw-tag">Stucco Repair</span>
+        <span class="kw-tag">Exterior Remodel</span>
+        <span class="kw-tag">Arizona Contractor</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section id="why">
+  <div class="why-grid">
+    <div>
+      <div class="section-label reveal">Why Queen Bee's</div>
+      <h2 class="section-title reveal">Phoenix Trusts Us<br>to Get It Right.</h2>
+      <p class="section-desc reveal">Word of mouth built this business. Our reputation is everything — and we protect it on every single job.</p>
+      <div class="why-features">
+        <div class="feature reveal">
+          <div class="feature-num">01</div>
+          <div>
+            <h4>Licensed & Insured in Arizona</h4>
+            <p>Full liability coverage and Arizona ROC licensing. You're always protected on every project we touch.</p>
+          </div>
+        </div>
+        <div class="feature reveal">
+          <div class="feature-num">02</div>
+          <div>
+            <h4>Locally Owned & Operated</h4>
+            <p>We live and work in Phoenix. We know the neighborhoods, the climate, and the materials that last in Arizona conditions.</p>
+          </div>
+        </div>
+        <div class="feature reveal">
+          <div class="feature-num">03</div>
+          <div>
+            <h4>No Subcontractors</h4>
+            <p>Our own crew handles every job. Consistent quality, consistent accountability — every time.</p>
+          </div>
+        </div>
+        <div class="feature reveal">
+          <div class="feature-num">04</div>
+          <div>
+            <h4>Free Detailed Estimates</h4>
+            <p>Transparent pricing. No surprises. You know exactly what you're getting before we ever pick up a brush.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="why-visual reveal">
+      <div class="why-box">
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <p class="review-text">"Queen Bee's completely transformed our office building. Professional, on time, and the quality is outstanding. We've already hired them for two more locations."</p>
+          <div class="reviewer">— David M., Commercial Property Owner · Phoenix</div>
+        </div>
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <p class="review-text">"Best painting contractor in Phoenix, hands down. They repainted our entire home exterior and it looks brand new. Will never use anyone else."</p>
+          <div class="reviewer">— Sarah T., Homeowner · Scottsdale</div>
+        </div>
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <p class="review-text">"Kitchen remodel came out better than I imagined. They treated my home like it was their own. Truly the queens of their craft."</p>
+          <div class="reviewer">— Maria L., Homeowner · Mesa</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE AREAS -->
+<section id="areas">
+  <div class="areas-header reveal">
+    <div class="section-label">Where We Work</div>
+    <h2 class="section-title">Serving All of Greater Phoenix</h2>
+    <p class="section-desc" style="margin: 0 auto;">Painting and remodeling services across the entire Phoenix metro area. Local expertise in every neighborhood.</p>
+  </div>
+  <div class="areas-grid">
+    <div class="area-card reveal">
+      <div class="area-icon">🌆</div>
+      <div class="area-name">Phoenix</div>
+      <div class="area-services">Painting · Remodeling</div>
+    </div>
+    <div class="area-card reveal">
+      <div class="area-icon">🌵</div>
+      <div class="area-name">Scottsdale</div>
+      <div class="area-services">Painting · Remodeling</div>
+    </div>
+    <div class="area-card reveal">
+      <div class="area-icon">🏙️</div>
+      <div class="area-name">Tempe</div>
+      <div class="area-services">Painting · Remodeling</div>
+    </div>
+    <div class="area-card reveal">
+      <div class="area-icon">🏘️</div>
+      <div class="area-name">Mesa</div>
+      <div class="area-services">Painting · Remodeling</div>
+    </div>
+    <div class="area-card reveal">
+      <div class="area-icon">🌇</div>
+      <div class="area-name">Glendale</div>
+      <div class="area-services">Painting · Remodeling</div>
+    </div>
+    <div class="area-card reveal">
+      <div class="area-icon">🏡</div>
+      <div class="area-name">Chandler</div>
+      <div class="area-services">Painting · Remodeling</div>
+    </div>
+    <div class="area-card reveal">
+      <div class="area-icon">🌴</div>
+      <div class="area-name">Gilbert</div>
+      <div class="area-services">Painting · Remodeling</div>
+    </div>
+    <div class="area-card reveal">
+      <div class="area-icon">🏠</div>
+      <div class="area-name">Peoria</div>
+      <div class="area-services">Painting · Remodeling</div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process">
+  <div class="process-header reveal">
+    <div class="section-label">How It Works</div>
+    <h2 class="section-title">Simple. Transparent. Done Right.</h2>
+    <p class="section-desc" style="margin: 0 auto;">We make the process as smooth as the finish we leave behind.</p>
+  </div>
+  <div class="process-steps">
+    <div class="step reveal">
+      <div class="step-num">1</div>
+      <h4>Free Estimate</h4>
+      <p>We visit your property, assess the scope, and provide a detailed written estimate — no obligation, no pressure.</p>
+    </div>
+    <div class="step reveal">
+      <div class="step-num">2</div>
+      <h4>Custom Plan</h4>
+      <p>We build a project plan tailored to your timeline, budget, and vision. Every detail confirmed before work begins.</p>
+    </div>
+    <div class="step reveal">
+      <div class="step-num">3</div>
+      <h4>Expert Execution</h4>
+      <p>Our crew gets to work with premium materials, clean workmanship, and daily communication throughout the project.</p>
+    </div>
+    <div class="step reveal">
+      <div class="step-num">4</div>
+      <h4>Final Walkthrough</h4>
+      <p>We don't leave until you're 100% satisfied. Every job is inspected and signed off together before we close out.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT / CTA -->
+<section id="contact">
+  <div class="cta-box">
+    <div class="section-label reveal">Get Started</div>
+    <h2 class="section-title reveal">Request Your<br>Free Estimate Today</h2>
+    <p class="section-desc reveal">Serving Phoenix, Scottsdale, Mesa, Tempe, Glendale, Chandler, Gilbert & Peoria. We respond within 1 business hour.</p>
+
+    <form class="contact-form reveal" onsubmit="handleSubmit(event)">
+      <div class="form-group">
+        <label>First Name</label>
+        <input type="text" placeholder="Jane" required>
+      </div>
+      <div class="form-group">
+        <label>Last Name</label>
+        <input type="text" placeholder="Smith" required>
+      </div>
+      <div class="form-group">
+        <label>Phone Number</label>
+        <input type="tel" placeholder="(602) 000-0000" required>
+      </div>
+      <div class="form-group">
+        <label>Email Address</label>
+        <input type="email" placeholder="jane@example.com">
+      </div>
+      <div class="form-group">
+        <label>Service Needed</label>
+        <select required>
+          <option value="">Select a service...</option>
+          <option>Residential Interior Painting</option>
+          <option>Residential Exterior Painting</option>
+          <option>Commercial Painting</option>
+          <option>Bathroom Remodeling</option>
+          <option>Kitchen Remodeling</option>
+          <option>Interior Remodeling</option>
+          <option>Exterior / Stucco Work</option>
+          <option>Multiple Services</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Your City in Phoenix Area</label>
+        <select>
+          <option value="">Select your city...</option>
+          <option>Phoenix</option>
+          <option>Scottsdale</option>
+          <option>Tempe</option>
+          <option>Mesa</option>
+          <option>Glendale</option>
+          <option>Chandler</option>
+          <option>Gilbert</option>
+          <option>Peoria</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="form-group full">
+        <label>Tell Us About Your Project</label>
+        <textarea placeholder="Describe your project, timeline, or any specific needs..."></textarea>
+      </div>
+      <div class="form-group full">
+        <button type="submit" class="btn-primary" style="width:100%; font-size:16px; padding:18px;">
+          👑 Request Free Estimate →
+        </button>
+      </div>
+    </form>
+
+    <div class="phone-cta reveal">
+      <p>Prefer to call? We answer 7 days a week.</p>
+      <a href="tel:6024752017" class="phone-num">(602) 475-2017</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-logo">👑 Queen Bee's Painting & Remodeling LLC</div>
+      <p class="footer-desc">Phoenix's trusted painting and remodeling contractor. Residential & commercial services across the greater Phoenix metro area. Licensed, insured, and built on referrals.</p>
+      <p style="font-size:12px; color:rgba(255,255,255,0.25);">Arizona ROC License #000000 · Fully Insured</p>
+    </div>
+    <div class="footer-col">
+      <h5>Services</h5>
+      <ul>
+        <li><a href="#services">Residential Painting</a></li>
+        <li><a href="#services">Commercial Painting</a></li>
+        <li><a href="#services">Bathroom Remodeling</a></li>
+        <li><a href="#services">Kitchen Remodeling</a></li>
+        <li><a href="#services">Interior Remodeling</a></li>
+        <li><a href="#services">Exterior Work</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Service Areas</h5>
+      <ul>
+        <li><a href="#areas">Phoenix, AZ</a></li>
+        <li><a href="#areas">Scottsdale, AZ</a></li>
+        <li><a href="#areas">Tempe, AZ</a></li>
+        <li><a href="#areas">Mesa, AZ</a></li>
+        <li><a href="#areas">Glendale, AZ</a></li>
+        <li><a href="#areas">Chandler, AZ</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contact</h5>
+      <ul>
+        <li><a href="tel:6024752017">(602) 475-2017</a></li>
+        <li><a href="mailto:Queenbeespaintingandremodeling@gmail.com">hello@queenbee<br>paintingphoenix.com</a></li>
+        <li><a href="contact.html">Free Estimate</a></li>
+        <li><a href="contact.html">Request Quote</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Queen Bee's Painting & Remodeling LLC · Phoenix, AZ · All Rights Reserved</p>
+    <div class="license-badge">⚡ Serving Phoenix Since 2012</div>
+  </div>
+</footer>
+
+<script>
+  // Scroll reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 80);
+      }
+    });
+  }, { threshold: 0.1 });
+  reveals.forEach(el => observer.observe(el));
+
+  // Form submit
+  function handleSubmit(e) {
+    e.preventDefault();
+    const btn = e.target.querySelector('button');
+    btn.textContent = '✅ Request Sent! We\'ll call you within 1 hour.';
+    btn.style.background = '#2A6B2A';
+    btn.style.color = '#fff';
+    btn.disabled = true;
+  }
+
+  // Smooth nav
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+</script>
+</body>
+</html>
