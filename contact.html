@@ -271,6 +271,19 @@
     .sticky-call { display:block; }
     body { padding-bottom:60px; }
   }
+
+  .lang-toggle {
+    display: flex; align-items: center; gap: 6px;
+    background: rgba(212,160,23,0.12);
+    border: 1px solid rgba(212,160,23,0.3);
+    color: #D4A017; padding: 7px 16px; border-radius: 100px;
+    font-size: 12px; font-weight: 700; letter-spacing: 1px;
+    cursor: pointer; transition: all 0.3s;
+    font-family: 'DM Sans', sans-serif;
+  }
+  .lang-toggle:hover { background: rgba(212,160,23,0.25); }
+  .lang-toggle .flag { font-size: 16px; }
+
 </style>
 </head>
 <body>
@@ -287,6 +300,9 @@
     </div>
   </a>
   <a href="index.html" class="nav-back">← Back to Home</a>
+  <button class="lang-toggle" onclick="toggleLang()" id="langBtn">
+    <span class="flag">🇲🇽</span> ESPAÑOL
+  </button>
 </nav>
 
 <!-- HERO -->
@@ -517,5 +533,146 @@
     });
   }
 </script>
+
+<script>
+const t = {
+  en: {
+    badge: '🐝 Free Estimates — No Obligation',
+    h1: 'Book Your <em>Free</em><br>Estimate Today',
+    heroP: "Fill out the form and we'll reach out within 1 hour by phone or text. Serving all of greater Phoenix — residential & commercial.",
+    r1: 'Responds within 1 hour', r2: 'Text & email confirmation', r3: 'No pressure, no obligation',
+    formH2: 'Request Your Free Estimate',
+    formP: "Tell us about your project and we'll get back to you fast — usually within the hour. All fields marked * are required.",
+    fn: 'First Name *', ln: 'Last Name *', phone: 'Phone Number *', email: 'Email Address',
+    service: 'Service Needed *', city: 'Your City *', propType: 'Property Type *',
+    bestTime: 'Best Time to Reach You', contactPref: 'How Would You Like Us to Contact You? *',
+    msgLabel: 'Tell Us About Your Project',
+    msgPh: 'Describe your project — size, scope, timeline, any specific needs or questions...',
+    urgency: '⚡ We typically respond within <strong>1 hour</strong> during business hours. Submissions after 6pm will receive a response first thing next morning.',
+    submitBtn: '👑 Send My Free Estimate Request →',
+    successH: 'Request Received!',
+    successP: "Thank you! Queen Bee's will reach out to you within 1 hour by your preferred contact method.",
+    sideCallH: '📞 Prefer to Reach Out Directly?',
+    callLabel: 'Call or Text Anytime',
+    callBtn: '📞 Call Now', textBtn: '💬 Send a Text',
+    emailLabel: 'Or Email Us',
+    trustH: '✅ Why Choose Queen Bee\'s',
+    t1: 'Licensed & Insured in Arizona — ROC certified',
+    t2: 'Locally owned & operated in Phoenix',
+    t3: 'No subcontractors — our crew, our quality',
+    t4: 'Free detailed estimates, transparent pricing',
+    t5: '5-star reputation built entirely on referrals',
+    t6: 'Materials chosen for Arizona heat & climate',
+    hoursH: '🕐 Business Hours',
+    reviewH: '💬 What Clients Say',
+    reviewText: '"Called in the morning, had an estimate by noon, and the crew started the next day. Absolutely the best painting company in Phoenix."',
+    reviewAuthor: '— Carlos R., Phoenix Homeowner',
+    navBack: '← Back to Home',
+    stickyCta: '📞 Call Now — (602) 475-2017',
+    langBtn: '🇲🇽 ESPAÑOL',
+  },
+  es: {
+    badge: '🐝 Estimados Gratis — Sin Obligación',
+    h1: 'Reserve Su <em>Estimado</em><br>Gratis Hoy',
+    heroP: 'Complete el formulario y nos comunicaremos en 1 hora por teléfono o mensaje. Sirviendo todo el área de Phoenix — residencial y comercial.',
+    r1: 'Responde en 1 hora', r2: 'Confirmación por texto y correo', r3: 'Sin presión, sin obligación',
+    formH2: 'Solicite Su Estimado Gratis',
+    formP: 'Cuéntenos sobre su proyecto y le responderemos rápido — normalmente en menos de una hora. Los campos con * son obligatorios.',
+    fn: 'Nombre *', ln: 'Apellido *', phone: 'Número de Teléfono *', email: 'Correo Electrónico',
+    service: 'Servicio Necesario *', city: 'Su Ciudad *', propType: 'Tipo de Propiedad *',
+    bestTime: 'Mejor Hora para Contactarle', contactPref: '¿Cómo Prefiere que lo Contactemos? *',
+    msgLabel: 'Cuéntenos Sobre Su Proyecto',
+    msgPh: 'Describa su proyecto — tamaño, alcance, cronograma, necesidades específicas o preguntas...',
+    urgency: '⚡ Típicamente respondemos en <strong>1 hora</strong> durante horas hábiles. Los envíos después de las 6pm recibirán respuesta a primera hora del día siguiente.',
+    submitBtn: '👑 Enviar Mi Solicitud de Estimado Gratis →',
+    successH: '¡Solicitud Recibida!',
+    successP: '¡Gracias! Queen Bee\'s se comunicará con usted en 1 hora por su método de contacto preferido.',
+    sideCallH: '📞 ¿Prefiere Contactarnos Directamente?',
+    callLabel: 'Llame o Envíe un Mensaje',
+    callBtn: '📞 Llamar Ahora', textBtn: '💬 Enviar Mensaje de Texto',
+    emailLabel: 'O Escríbanos por Correo',
+    trustH: '✅ Por Qué Elegir Queen Bee\'s',
+    t1: 'Licenciados y Asegurados en Arizona — Certificado ROC',
+    t2: 'Empresa local de Phoenix',
+    t3: 'Sin subcontratistas — nuestro equipo, nuestra calidad',
+    t4: 'Estimados detallados gratis, precios transparentes',
+    t5: 'Reputación de 5 estrellas construida con referencias',
+    t6: 'Materiales elegidos para el calor y clima de Arizona',
+    hoursH: '🕐 Horario de Atención',
+    reviewH: '💬 Lo Que Dicen Nuestros Clientes',
+    reviewText: '"Llamé en la mañana, tuve un estimado al mediodía y el equipo comenzó al día siguiente. Absolutamente la mejor empresa de pintura en Phoenix."',
+    reviewAuthor: '— Carlos R., Propietario en Phoenix',
+    navBack: '← Regresar al Inicio',
+    stickyCta: '📞 Llame Ahora — (602) 475-2017',
+    langBtn: '🇺🇸 ENGLISH',
+  }
+};
+
+let lang = 'en';
+
+function applyLang(l) {
+  const d = t[l];
+  document.documentElement.lang = l;
+
+  const setHTML = (sel, val) => { const el = document.querySelector(sel); if(el && val) el.innerHTML = val; };
+  const setAttr = (sel, attr, val) => { const el = document.querySelector(sel); if(el && val) el.setAttribute(attr, val); };
+
+  setHTML('.badge', d.badge);
+  setHTML('.page-hero h1', d.h1);
+  setHTML('.page-hero > p, .page-hero p:not(.badge)', d.heroP);
+  const respItems = document.querySelectorAll('.resp-item');
+  if(respItems[0]) respItems[0].innerHTML = '<div class="resp-dot"></div> ' + d.r1;
+  if(respItems[1]) respItems[1].innerHTML = '<div class="resp-dot"></div> ' + d.r2;
+  if(respItems[2]) respItems[2].innerHTML = '<div class="resp-dot"></div> ' + d.r3;
+  setHTML('#form-wrap h2', d.formH2);
+  setHTML('#form-wrap > p', d.formP);
+
+  // Form labels
+  const labels = document.querySelectorAll('.fg label');
+  const labelKeys = ['fn','ln','phone','email','service','city','propType','bestTime','contactPref','msgLabel'];
+  labelKeys.forEach((k,i) => { if(labels[i] && d[k]) labels[i].innerHTML = d[k]; });
+
+  setAttr('textarea[name="message"]', 'placeholder', d.msgPh);
+  setHTML('.urgency-row span:last-child', d.urgency);
+  setHTML('.btn-submit', d.submitBtn);
+  setHTML('#success h3', d.successH);
+
+  // Sidebar
+  const sideH3s = document.querySelectorAll('.side-card h3');
+  if(sideH3s[0]) sideH3s[0].innerHTML = d.sideCallH;
+  if(sideH3s[1]) sideH3s[1].innerHTML = d.trustH;
+  if(sideH3s[2]) sideH3s[2].innerHTML = d.hoursH;
+  if(sideH3s[3]) sideH3s[3].innerHTML = d.reviewH;
+
+  setHTML('.call-label', d.callLabel);
+  setHTML('.call-btn', d.callBtn);
+  setHTML('.text-btn', d.textBtn);
+
+  const trustItems = document.querySelectorAll('.trust-list li');
+  ['t1','t2','t3','t4','t5','t6'].forEach((k,i) => {
+    if(trustItems[i]) trustItems[i].querySelector('span:last-child') 
+      ? trustItems[i].querySelector('span:last-child').innerHTML = d[k]
+      : null;
+  });
+
+  setHTML('.mini-text', d.reviewText);
+  setHTML('.mini-author', d.reviewAuthor);
+  setHTML('.nav-back', d.navBack);
+  setHTML('.sticky-call', d.stickyCta);
+  setHTML('#langBtn', d.langBtn);
+
+  document.title = l === 'es'
+    ? "Reservar Estimado Gratis | Queen Bee's Pintura y Remodelación Phoenix AZ"
+    : "Book a Free Estimate | Queen Bee's Painting & Remodeling Phoenix AZ";
+}
+
+function toggleLang() {
+  lang = lang === 'en' ? 'es' : 'en';
+  applyLang(lang);
+  document.body.style.opacity = '0.8';
+  setTimeout(() => document.body.style.opacity = '1', 200);
+}
+</script>
+
 </body>
 </html>
